@@ -1,0 +1,79 @@
+    body {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        margin: 0;
+        background-color: beige;
+    }
+    /*index.html*/
+    
+    #content {
+        box-sizing: border-box;
+        border-right: 2px solid orange;
+        width: 70%;
+    }
+    
+    h1 {
+        text-align: center;
+    }
+    
+    #content img {
+        border-radius: 50%;
+        margin: 4px;
+        padding: 4px;
+        float: left;
+        cursor: pointer;
+    }
+    
+    .about {
+        padding: 6px;
+    }
+    
+    li {
+        font-size: 120%;
+        font-style: italic;
+        line-height: 1.8em;
+        list-style: circle;
+        list-style-position: outside;
+        border-bottom: 1px dashed purple;
+    }
+    /*gameblock*/
+    
+    .gameBlock {
+        box-sizing: border-box;
+        width: 27%;
+        float: right;
+    }
+    
+    button {
+        cursor: pointer;
+    }
+    
+    div.cs {
+        margin-left: -2em;
+    }
+    
+    img.game {
+        border-radius: 50%;
+        float: left;
+        cursor: pointer;
+    }
+    
+    h3 {
+        text-align: justify;
+        font-variant: small-caps;
+    }
+    
+    div.lol {
+        margin-top: 6em;
+        margin-left: -2em;
+    }
+    
+    div.pubg {
+        margin-top: 6em;
+        margin-left: -2em;
+    }
+    
+    footer {
+        text-align: center;
+        font-size: 110%;
+        margin-top: 3em;
+    }
