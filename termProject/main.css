@@ -1,0 +1,128 @@
+    body {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        margin: 0;
+
+    }
+
+    /*index.html*/
+
+    #content {
+        box-sizing: border-box;
+        border-right: 2px solid orange;
+        width: 70%;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    #content img {
+        border-radius: 50%;
+        margin: 4px;
+        padding: 4px;
+        float: left;
+        cursor: pointer;
+    }
+
+    .about {
+        padding: 6px;
+    }
+
+    li.home {
+        font-size: 120%;
+        font-style: italic;
+        line-height: 1.8em;
+        list-style: circle;
+        list-style-position: outside;
+        border-bottom: 1px dashed purple;
+    }
+
+    /*gameblock*/
+
+    .gameBlock {
+        box-sizing: border-box;
+        width: 27%;
+        float: right;
+    }
+
+    button {
+        cursor: pointer;
+    }
+
+    div.cs {
+        margin-left: -2em;
+    }
+
+    img.game {
+        border-radius: 50%;
+        float: left;
+        cursor: pointer;
+    }
+
+    h3 {
+        text-align: justify;
+        font-variant: small-caps;
+    }
+
+    div.lol {
+        margin-top: 6em;
+        margin-left: -2em;
+    }
+
+    div.pubg {
+        margin-top: 6em;
+        margin-left: -2em;
+    }
+
+    footer {
+        text-align: center;
+        font-size: 110%;
+        margin-top: 3em;
+        clear: both;
+    }
+
+    /*csgo.html*/
+    #head{
+        border-bottom: 2px dashed orange;
+    }
+
+    img.icon{
+        border-radius: 50%;
+        float: left;
+        padding: 2px;
+    }
+
+    #head h1{
+        display: flex;
+        justify-content: center;
+        padding: 2px;
+        color: coral;
+        font-size: 300%;
+        text-shadow: 2px 2px blue;
+    }
+
+    #head p{
+        font-size: 120%;
+        font-variant: unset;
+        text-align: center;
+    }
+
+    img.map{
+        display: block;
+        margin-left: auto;
+        float: right;
+        margin-top: -0.7em;
+    }
+
+    #head ul{
+        display: block;
+        margin-left: auto;
+        margin-top: 3em;
+    }
+
+    #head li{
+        line-height: 1.8em;
+        font-variant: unset;
+        font-size: 110%;
+        list-style: circle;
+    }
