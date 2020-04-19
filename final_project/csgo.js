@@ -2,6 +2,8 @@
 
 // then print them out
 
+postObjs = []
+
 function printPosts() {
 	postObjs = []
 	votes = {}
@@ -50,9 +52,11 @@ function downvote(id) {
 }
 
 function update(id, count) {
+	var x;
 	for(var i=0;i<postObjs.length;i++) {
 		if(postObjs[i].id == id) {
-			postObjs[i].votes = votes[id]
+			postObjs[i].votes = votes[id];
+			x = i;
 		}
 	}
 	$.ajax
@@ -64,5 +68,11 @@ function update(id, count) {
         success: function () {alert("SUCCESS"); },
         failure: function() {alert("ERROR");}
     });
-	//$("ul").find("#" + id.toString()).html("Upvotes: " + count + "<br/>");
+	output = "";
+	output += "<li id='" + postObjs[x].id + "'>";
+	output += "<b>" + postObjs[x].name + "</b> <br/>";
+	output += "<em>" + postObjs[x].desc + "</em> <br/> ";
+	output += "Upvotes: " + postObjs[x].votes + "<br/>";
+	output += "<button type='button' onclick='upvote(" + postObjs[x].id + ")'>↑</button><button type='button' onclick='downvote(" + postObjs[x].id + ")'>↓</button></li>";
+	$("ul").find("#" + postObjs[x].id).html(output);
 }
