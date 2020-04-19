@@ -1,0 +1,43 @@
+[
+		{
+            "name": "Bunny hopping",
+            "desc": "is cool",
+            "votes": 29,
+			"id": 0
+        },   
+        {    
+            "name": "Crosshair placement",
+            "desc": "is hard",
+            "votes": -1,
+			"id": 1
+        }
+]
+
+<?php
+$myFile = "posts.json";
+$fh = fopen($myFile, 'w') or die("can't open file");
+$stringData = $_POST["data"];
+fwrite($fh, $stringData);
+fclose($fh)
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Counter Strike : Global Offensive</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <script type="text/javascript" src="resources/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="csgo.js"></script>
+	<link rel="stylesheet" href="csgo.css" type="text/css" />
+  </head>
+  <body>
+    <div id="bodyBlock">
+      <h1>CS:GO</h1>
+     
+      <div id="posts"></div>
+      
+    </div>
+  </body>
+</html>
+
+
