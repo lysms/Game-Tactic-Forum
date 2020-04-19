@@ -6,29 +6,41 @@ postObjs = []
 
 function printPosts() {
 	postObjs = []
-	votes = {}
+	upvotes = {}
+	downvotes = {}
 	$.ajax({
 		type: "GET",
 		url: "posts.json",
 		success: function(responseData, status) {
 			$('#posts').html("");
 			var output="<ul>";
+			responseData.sort(function(a, b) {
+				net_votes_a = a.upvotes - a.downvotes;
+				net_votes_b = b.upvotes - b.downvotes;
+				if(net_votes_a > net_votes_b) {
+					return -1;
+				}
+				else
+				{
+					return 1;
+				}
+			})
 			$.each(responseData, function(i, item) {
-				
-				votes[item.id] = item.votes;
+				upvotes[item.id] = item.upvotes;
+				downvotes[item.id] = item.downvotes;
 				
 				post = new Object()
 				post.name = item.name;
 				post.desc = item.desc;
-				post.votes = item.votes;
+				post.upvotes = item.upvotes;
+				post.downvotes = item.downvotes;
 				post.id = item.id;
 				postObjs.push(post)
 				
 				output += "<li id='" + item.id + "'>";
 				output += "<b>" + item.name + "</b> <br/>";
 				output += "<em>" + item.desc + "</em> <br/> ";
-				output += "Upvotes: " + item.votes + "<br/>";
-				output += "<button type='button' onclick='upvote(" + item.id + ")'>	&#128147; " + item.votes + "</button><button type='button' onclick='downvote(" + item.id + ")'> &#128148; " + item.votes + "</button></li>";
+				output += "<button type='button' onclick='upvote(" + item.id + ")'>	&#128147; " + item.upvotes + "</button><button type='button' onclick='downvote(" + item.id + ")'> &#128148; " + item.downvotes + "</button></li>";
 			});
 			output += "</ul>";
 			$('#posts').html(output);
@@ -42,20 +54,23 @@ function printPosts() {
 $(document).ready(printPosts());
 
 function upvote(id) {
-	votes[id]++;
-	update(id, votes[id])
+	upvotes[id]++;
+	update(id, upvotes[id], "up")
 }
 
 function downvote(id) {
-	votes[id]--;
-	update(id, votes[id])
+	downvotes[id]++;
+	update(id, downvotes[id], "down")
 }
 
-function update(id, count) {
+function update(id, count, type) {
 	var x;
 	for(var i=0;i<postObjs.length;i++) {
 		if(postObjs[i].id == id) {
-			postObjs[i].votes = votes[id];
+			if(type == "up")
+				postObjs[i].upvotes = count;
+			if(type == "down")
+				postObjs[i].downvotes = count;
 			x = i;
 		}
 	}
@@ -72,7 +87,6 @@ function update(id, count) {
 	output += "<li id='" + postObjs[x].id + "'>";
 	output += "<b>" + postObjs[x].name + "</b> <br/>";
 	output += "<em>" + postObjs[x].desc + "</em> <br/> ";
-	output += "Upvotes: " + postObjs[x].votes + "<br/>";
-	output += "<button type='button' onclick='upvote(" + postObjs[x].id + ")'>&#128147; " + postObjs[x].votes + "</button><button type='button' onclick='downvote(" + postObjs[x].id + ")'>&#128148;" + postObjs[x].votes + "</button></li>";
+	output += "<button type='button' onclick='upvote(" + postObjs[x].id + ")'>&#128147; " + postObjs[x].upvotes + "</button><button type='button' onclick='downvote(" + postObjs[x].id + ")'>&#128148;" + postObjs[x].downvotes + "</button></li>";
 	$("ul").find("#" + postObjs[x].id).html(output);
 }
