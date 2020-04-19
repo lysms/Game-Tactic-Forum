@@ -28,7 +28,7 @@ function printPosts() {
 				output += "<b>" + item.name + "</b> <br/>";
 				output += "<em>" + item.desc + "</em> <br/> ";
 				output += "Upvotes: " + item.votes + "<br/>";
-				output += "<button type='button' onclick='upvote(" + item.id + ")'>↑</button><button type='button' onclick='downvote(" + item.id + ")'>↓</button></li>";
+				output += "<button type='button' onclick='upvote(" + item.id + ")'>	&#128147; " + item.votes + "</button><button type='button' onclick='downvote(" + item.id + ")'> &#128148; " + item.votes + "</button></li>";
 			});
 			output += "</ul>";
 			$('#posts').html(output);
@@ -73,6 +73,6 @@ function update(id, count) {
 	output += "<b>" + postObjs[x].name + "</b> <br/>";
 	output += "<em>" + postObjs[x].desc + "</em> <br/> ";
 	output += "Upvotes: " + postObjs[x].votes + "<br/>";
-	output += "<button type='button' onclick='upvote(" + postObjs[x].id + ")'>↑</button><button type='button' onclick='downvote(" + postObjs[x].id + ")'>↓</button></li>";
+	output += "<button type='button' onclick='upvote(" + postObjs[x].id + ")'>&#128147; " + postObjs[x].votes + "</button><button type='button' onclick='downvote(" + postObjs[x].id + ")'>&#128148;" + postObjs[x].votes + "</button></li>";
 	$("ul").find("#" + postObjs[x].id).html(output);
 }
