@@ -2,15 +2,21 @@
 
 // then print them out
 
-postObjs = []
+if(window.history.replaceState) {
+	window.history.replaceState( null, null, window.location.href );
+}
+
+numPosts = 0;
+postObjs = [];
 
 function printPosts() {
 	postObjs = []
 	upvotes = {}
 	downvotes = {}
 	$.ajax({
-		type: "GET",
+		type: "POST",
 		url: "posts.json",
+		cache:false,
 		success: function(responseData, status) {
 			$('#posts').html("");
 			var output="<ul>";
@@ -41,6 +47,7 @@ function printPosts() {
 				output += "<b>" + item.name + "</b> <br/>";
 				output += "<em>" + item.desc + "</em> <br/> ";
 				output += "<button type='button' onclick='upvote(" + item.id + ")'>	&#128147; " + item.upvotes + "</button><button type='button' onclick='downvote(" + item.id + ")'> &#128148; " + item.downvotes + "</button></li>";
+				numPosts++;
 			});
 			output += "</ul>";
 			$('#posts').html(output);
@@ -52,6 +59,30 @@ function printPosts() {
 }
 
 $(document).ready(printPosts());
+
+function validate(formObj) {
+	title = formObj.title.value
+	desc = formObj.desc.value
+	
+	post = new Object();
+	post.name = title;
+	post.desc = desc;
+	post.upvotes = 0;
+	post.downvotes = 0;
+	post.id = numPosts;
+	numPosts++;
+	postObjs.push(post);
+	
+	$.ajax
+    ({
+        type: "POST",
+        dataType : 'json',
+        url: 'save_json.php',
+        data: { data: JSON.stringify(postObjs) },
+        success: function () {alert("SUCCESS"); },
+        failure: function() {alert("ERROR");}
+    });
+}
 
 function upvote(id) {
 	upvotes[id]++;
