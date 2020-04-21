@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>PlayerUnknowen's BattleGrounds Tactics Forum</title>
+    <script type="text/javascript" src="../resources/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../resources/main.css">
+    <script type="text/javascript" src="pubg.js"></script>
+</head>
+
+<body>
+
+<div id="head">
+
+    <a href="../index.html">
+        <img class="header" src="../../resources/head.png">
+    </a>
+
+    <a href="javascript: showText()">
+        <img class="icon" src="../../resources/PUBG.jpeg" width="300" height="300" alt="The icon of CS-GO">
+    </a>
+
+        <h1>PlayerUnknowen's BattleGrounds</h1>
+
+
+
+    <div id="show">
+        <p>PlayerUnknown's Battlegrounds, better knowns as PUBG, is a multiplayer battle royale game in which players drop onto an island and fight to be the last one left standing.</p>
+
+        <ul>
+            <li>Run game -> Select the mode type (Solo, Duo, Squad) -> Enjoy the Game.</li>
+            <li>Solo: Fight against 99 other players to become the last one standing</li>
+            <li>Duo: Group up with a friend or someone random as a team of two to fight against other Duos and become the last duo or one standing.</li>
+            <li>Squad: Group up with up to three other friends or someone random. The team can be as big as a group of four. Fight against other squads to become the last squad or one standing.</li>
+        </ul>
+    </div>
+</div>
+
+<div id="posts">
+
+</div>
+
+<form method="POST" onsubmit="return validate(this);">
+    <div class="formData">
+       <label for="title" class="field">Title:</label> <div class="value"><input type="text" size="60" value="" name="title" id="title"/></div>
+       <label for="desc" class="field">Description:</label><div class="value"><textarea onclick="javascript:remove();" type="text" rows="10" cols="100" value="" name="desc" id="desc"/>Share your game tactics!!!!</textarea></div>
+       <input type="submit" value="Submit" id="save" name="save"/>
+    </div>
+</form>
+
+    <footer>
+        <p>&copy; Group 9</p>
+    </footer>
+
+
+
+</body>
+
+</html>
