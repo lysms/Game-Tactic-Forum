@@ -65,7 +65,7 @@ function printPosts() {
 				output += "<p id='" + item.id + "'>";
 				output += "<b>" + item.name + "</b> <br/>";
 				output += "<em>" + item.desc + "</em> <br/> </p>";
-				output += "<button type='button' onclick='upvote(" + item.id + ")'>	&#128147; " + item.upvotes + "</button><button type='button' onclick='downvote(" + item.id + ")'> &#128148; " + item.downvotes + "</button>";
+				output += "<button id='u" + item.id + "' type='button' onclick='upvote(" + item.id + ")'>	&#128147; " + item.upvotes + "</button><button id='d" + item.id + "' type='button' onclick='downvote(" + item.id + ")'> &#128148; " + item.downvotes + "</button>";
 				numPosts++;
 			});
 			output += "</div>";
@@ -82,6 +82,10 @@ $(document).ready(printPosts());
 function validate(formObj) {
 	title = formObj.title.value
 	desc = formObj.desc.value
+	
+	if(title == "" || desc == "" || (title == "" && (desc == "" || desc == "Share your game tactics!!!!"))) {
+		return false;
+	}
 
 	post = new Object();
 	post.name = title;
@@ -103,17 +107,17 @@ function validate(formObj) {
         failure: function() {alert("ERROR");}
 	});
 
-  
+	return true;
 }
 
 function upvote(id) {
 	upvotes[id]++;
-	update(id, upvotes[id], "up")
+	update(id, upvotes[id], "up");
 }
 
 function downvote(id) {
 	downvotes[id]++;
-	update(id, downvotes[id], "down")
+	update(id, downvotes[id], "down");
 }
 
 function update(id, count, type) {
@@ -136,10 +140,11 @@ function update(id, count, type) {
         success: function () {alert("SUCCESS"); },
         failure: function() {alert("ERROR");}
     });
-	output = "";
-	output += "<p id='" + postObjs[x].id + "'>";
-	output += "<b>" + postObjs[x].name + "</b> <br/>";
-	output += "<em>" + postObjs[x].desc + "</em> <br/> </p> ";
-	output += "<button type='button' onclick='upvote(" + postObjs[x].id + ")'>&#128147; " + postObjs[x].upvotes + "</button><button type='button' onclick='downvote(" + postObjs[x].id + ")'>&#128148;" + postObjs[x].downvotes + "</button>";
-	$("div").find("#" + postObjs[x].id).html(output);
+	item = postObjs[x];
+	up = "&#128147; " + item.upvotes + "</button>";
+	$("#u" + postObjs[x].id).html("");
+	$("#u" + postObjs[x].id).html(up);
+	down = "&#128148; " + item.downvotes;
+	$("#d" + postObjs[x].id).html("");
+	$("#d" + postObjs[x].id).html(down);
 }
