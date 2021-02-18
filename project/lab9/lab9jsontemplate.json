@@ -1,0 +1,53 @@
+{
+    "menuItem": [{
+            "menuName": "Lab 2",
+            "menuDesc": "Resume",
+            "menuURL": "../lab2/liny16-yanshenlin-resume.html"
+        },
+        {
+            "menuName": "Lab 3",
+            "menuDesc": "Website",
+            "menuURL": "../../index.html"
+        },
+        {
+            "menuName": "Lab 4",
+            "menuDesc": "Rss Feed",
+            "menuURL": "../lab4/rss_feed.xml"
+        },
+        {
+            "menuName": "Lab 4",
+            "menuDesc": "Atom Feed",
+            "menuURL": "../lab4/atom_feed.xml"
+        },
+        {
+            "menuName": "Lab 5",
+            "menuDesc": "JavaScript",
+            "menuURL": "../lab5/lab5.html"
+        },
+        {
+            "menuName": "Lab 6",
+            "menuDesc": "jQuery",
+            "menuURL": "../lab6/lab6.html"
+        },
+        {
+            "menuName": "Lab 7",
+            "menuDesc": "Mockup Project Prototype",
+            "menuURL": "../lab7/mockupPrototype.pdf"
+        },
+        {
+            "menuName": "Lab 8",
+            "menuDesc": "XAMPP Deployment",
+            "menuURL": "../lab8/lab8.html"
+        },
+        {
+            "menuName": "Lab 9",
+            "menuDesc": "Dynamic Website JSON/AJAX",
+            "menuURL": "../lab9/lab9project.html"
+        },
+        {
+            "menuName": "Lab 10",
+            "menuDesc": "PHP & MySQL",
+            "menuURL": "../lab10/index.php"
+        }
+    ]
+}

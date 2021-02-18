@@ -1,1 +1,16 @@
-[{"name":"League of Lends","desc":"This game is super cool.","upvotes":138,"downvotes":3,"id":0},{"name":"TFT game mode","desc":"star guidain is super cool. Awesome!!!","upvotes":4,"downvotes":0,"id":1}]
+[
+    {
+        "name": "Team Flight Tactics",
+        "desc": "TFT is a round-based strategy game that pits you against seven oppoonents in a free-for-all race to build a powerful team that fights on your behalf. There are so many comps for thsi game mode. So far right now, E-girls comp is super strong. Feel free to try this comp and rank up.",
+        "upvotes": 80,
+        "downvotes": 1,
+        "id": 0
+    },
+    {
+        "name": "Dark Star Comp",
+        "desc": "Dark Star comp is super strong. Jhin gets high damage and this comp is unbeatable. ",
+        "upvotes": 36,
+        "downvotes": 8,
+        "id": 1
+    }
+]

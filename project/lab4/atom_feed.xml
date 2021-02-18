@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+    
+    <title>Atom Feeds</title>
+    <subtitle>These are the feeds using atom.</subtitle>
+    <link href="https://afsws.rpi.edu/AFS/home/56/liny16/public_html/iit/" rel="self"/>
+    <id>urn:uuid:ec8dce94-79cc-4833-af39-3c5f63872f3c</id>
+    <updated>2020-02-23T14:00:00Z</updated>
+    
+    <!--own information-->
+    <author>
+        <name>Yanshen Lin</name>
+        <email>liny16@rpi.edu</email>
+    </author>
+    
+    <entry>
+        <title>Badminton Central</title>
+        <link href="https://www.badmintoncentral.com/forums/index.php"/>
+        <id>urn:uuid:a55e08e8-9209-4d44-b54d-e1f4ef0ef4ca</id>
+        <updated>1998-12-24T00:01:00Z</updated>
+        <summary>This is a forums about badminton. You can find out anythings relate to badminton right here.</summary>
+    </entry>
+    
+    <entry>
+        <title>Paul Stewart Badminton</title>
+        <link href="https://badminton-coach.co.uk"/>
+        <id>urn:uuid:35886838-35fe-456a-af7a-4f6639f4ebcb</id>
+        <updated>2009-10-07T00:01:00Z</updated>
+        <summary>This is a blog that create by Paul Stewart. There are discussions, news, introduction, etc that relate to badminton.</summary>
+    </entry>
+    
+    <entry>
+        <title>Badminton Shuttle</title>
+        <link href="https://www.badmintonshuttle.com"/>
+        <id>urn:uuid:73f18de6-b3be-4705-b11f-441b5dc5490d</id>
+        <updated>2019-10-22T03:20:57Z</updated>
+        <summary>Badminton Shuttle is a website relate to badminton. all informations about badminton will be on this site.</summary>
+    </entry>
+    
+    <entry>
+        <title>Nicholas Bonkowsky Badminton Blog</title>
+        <link href="http://nicholasbonkowsky.blogspot.com/"/>
+        <id>urn:uuid:e75955db-0b4e-47c1-9b69-2c12c3b34c6b</id>
+        <updated>2012-09-11T00:01:00Z</updated>
+        <summary>This is a blog about badminton. There are many informations about famous badminton players and badminton matches.</summary>
+    </entry>
+    
+    <entry>
+        <title>Badminton Live News</title>
+        <link href="http://yumantianxia.blogspot.com/"/>
+        <id>urn:uuid:c1dd54dd-257b-4319-bac8-19a0657a8dad</id>
+        <updated>2014-09-11T00:01:00Z</updated>
+        <summary>This is a up-to-date news from badminton players in China. This is a Chinese website.</summary>
+    </entry>
+    
+</feed>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+    
+    <title>RSS Feeds</title>
+    <link>https://afsws.rpi.edu/AFS/home/56/liny16/public_html/iit/</link>
+    <description>This is my ITWS Homepage.</description>
+    <lastBuildDate>Sun, 23 Feb 2020 00:01:00 +0000 </lastBuildDate>
+    <pubDate>Sun, 23 Feb 2020 00:01:00 +0000 </pubDate>
+    
+    
+    <item>
+        <title>Badminton Central</title>
+        <description>This is Badminton Central website. It is a blog about badminton. You can find out anythings relate to badminton right here.</description>
+        <link>https://www.badmintoncentral.com/forums/index.php</link>
+        <guid>https://www.badmintoncentral.com/forums/index.php</guid>
+        <pubDate>24 Dec 1998 00:01:00 +0000</pubDate>
+    </item>
+    
+    <item>
+        <title>Badminton Shuttle</title>
+        <description>Badminton Shuttle is a website relate to badminton. all informations about badminton will be on this site.</description>
+        <link>https://www.badmintonshuttle.com/</link>
+        <guid>https://www.badmintonshuttle.com/</guid>
+        <pubDate>22 Oct 2019 03:20:57 +0000</pubDate>
+        
+    </item>
+    
+    <item>
+        <title>Paul Stewart Badminton</title>
+        <description>This is a blog that create by Paul Stewart. There are discussions, news, introduction, etc that relate to badminton.</description>
+        <link>https://badminton-coach.co.uk/</link>
+        <guid>https://badminton-coach.co.uk/</guid>
+        <pubDate>7 Oct 2009 00:01:00 +0000</pubDate>
+    </item>
+    
+    <item>
+        <title>Nicholas Bonkowsky Badminton Blog</title>
+        <description>This is a blog about badminton. There are many informations about famous badminton players and badminton matches.</description>
+        <link>http://nicholasbonkowsky.blogspot.com/</link>
+        <guid>http://nicholasbonkowsky.blogspot.com/</guid>
+        <pubDate>11 Sep 2012 00:01:00 +0000</pubDate>
+    </item>
+    
+    <item>
+        <title>Badminton Live News</title>
+        <description>This is a up-to-date news from badminton players in China. This is a Chinese website.</description>
+        <link>http://yumantianxia.blogspot.com/</link>
+        <guid>http://yumantianxia.blogspot.com/</guid>
+        <pubDate>11 Sep 2014 00:01:00 +0000</pubDate>
+    </item>
+    
+</channel>
+
+</rss>

@@ -1,5 +1,7 @@
 // add ready function with posts into listStyleType
 
+clicked = [];
+
 $.ajax({ cache: false });
 //function to show the text
 function showText(){
@@ -69,6 +71,8 @@ function printPosts() {
 				numPosts++;
 			});
 			output += "</div>";
+			for(var i=0;i<numPosts;i++)
+				clicked.push(false);
 			$('#posts').html(output);
 		}, error: function(msg) {
 		// there was a problem
@@ -111,13 +115,19 @@ function validate(formObj) {
 }
 
 function upvote(id) {
-	upvotes[id]++;
-	update(id, upvotes[id], "up");
+	if(!clicked[id]) {
+		upvotes[id]++;
+		update(id, upvotes[id], "up");
+		clicked[id] = true;
+	}
 }
 
 function downvote(id) {
-	downvotes[id]++;
-	update(id, downvotes[id], "down");
+	if(!clicked[id]) {
+		downvotes[id]++;
+		update(id, downvotes[id], "down");
+		clicked[id] = true;
+	}
 }
 
 function update(id, count, type) {

@@ -1,0 +1,41 @@
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 2em;
+    }
+    
+    h1 {
+        text-align: center;
+        border-bottom: 4px orange solid;
+        font-size: 150%;
+        font-style: italic;
+    }
+    
+    #lists {
+        line-height: 2em;
+        font-weight: bolder;
+        border-right: 2px skyblue dashed;
+        border-left: 2px skyblue dashed;
+    }
+    
+    a:link {
+        text-decoration: none;
+        color: rgb(8, 153, 250);
+    }
+    
+    a:active {
+        color: purple;
+        font-size: 130%;
+        font-style: oblique;
+    }
+    
+    ul {
+        list-style-type: circle;
+        list-style-position: outside;
+    }
+    
+    footer {
+        text-align: center;
+        font-size: 120%;
+        font-variant: small-caps;
+        font-weight: bolder;
+    }
